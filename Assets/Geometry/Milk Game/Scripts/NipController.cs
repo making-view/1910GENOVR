@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CapsuleCollider))]
 public class NipController : MonoBehaviour
 {
     [SerializeField] private float maxThreshold = 80f;
@@ -11,11 +12,13 @@ public class NipController : MonoBehaviour
     private Vector3 tittyStartPos;
     private Vector3 controlObjectStartPos;
     private float thresholdFactor = 1000.0f;
+    private CapsuleCollider collider = null;
 
     void Start()
     {
         controlObjectStartPos = transform.position;
         tittyStartPos = tittyBone.transform.position;
+        collider = GetComponent<CapsuleCollider>();
 
         var emission = tittyMilk.emission;  
         emission.rateOverTime = 0.0f;
