@@ -39,4 +39,14 @@ public class NipController : MonoBehaviour
         else
             emission.rateOverTime = 0.0f;
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+
+    }
 }
