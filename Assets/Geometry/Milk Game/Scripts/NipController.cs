@@ -6,19 +6,21 @@ using UnityEngine;
 public class NipController : MonoBehaviour
 {
     [SerializeField] private float maxThreshold = 80f;
+    [SerializeField] private float minThreshold = -20f;
     [SerializeField] private GameObject tittyBone = null;
     [SerializeField] private ParticleSystem tittyMilk = null;
 
     private Vector3 tittyStartPos;
     private Vector3 controlObjectStartPos;
     private float thresholdFactor = 1000.0f;
-    private CapsuleCollider collider = null;
+    private OVRGrabbable grabbable = null;
+    private bool previouslyGrabbed = false;
 
     void Start()
     {
         controlObjectStartPos = transform.position;
         tittyStartPos = tittyBone.transform.position;
-        collider = GetComponent<CapsuleCollider>();
+        grabbable = GetComponent<OVRGrabbable>();
 
         var emission = tittyMilk.emission;  
         emission.rateOverTime = 0.0f;
@@ -26,27 +28,25 @@ public class NipController : MonoBehaviour
 
     void Update()
     {
-        var threshold = maxThreshold / thresholdFactor;
-        var diff = Mathf.Clamp((controlObjectStartPos - transform.position).y, 0.0f, threshold);
+        if (!grabbable.isGrabbed && previouslyGrabbed)
+        {
+            transform.position = controlObjectStartPos;
+        }
+
+        var maxDiff = maxThreshold / thresholdFactor;
+        var minDiff = minThreshold / thresholdFactor;
+        var diff = Mathf.Clamp((controlObjectStartPos - transform.position).y, minDiff, maxDiff);
         var newPos = tittyBone.transform.position;
         newPos.y = tittyStartPos.y - diff;
 
         tittyBone.transform.position = newPos;
 
         var emission = tittyMilk.emission;
-        if (diff == threshold)
+        if (diff == maxDiff)
             emission.rateOverTime = 10.0f;
         else
             emission.rateOverTime = 0.0f;
-    }
 
-    void OnTriggerEnter(Collider other)
-    {
-        
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-
+        previouslyGrabbed = grabbable.isGrabbed;  
     }
 }
