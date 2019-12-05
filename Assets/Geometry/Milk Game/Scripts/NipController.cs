@@ -23,6 +23,7 @@ public class NipController : MonoBehaviour
     private bool squirtRefractoryPeriod = false;
     private float maxDiff = 0.0f;
     private float minDiff = 0.0f;
+    private GameManager gameManager = null;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class NipController : MonoBehaviour
         controllerStartRot = transform.rotation;
         tittyStartPos = tittyBone.transform.position;
         grabbable = GetComponent<OVRGrabbable>();
+        gameManager = FindObjectOfType<GameManager>();
 
         var emission = tittyMilk.emission;  
         emission.rateOverTime = 0.0f;
@@ -61,6 +63,7 @@ public class NipController : MonoBehaviour
         {
             emission.rateOverTime = 10.0f;
             milkTimer += Time.deltaTime;
+            gameManager.AddScore((int)(Time.deltaTime * 1000));
         }
         else if (!grabbable.isGrabbed)
         {

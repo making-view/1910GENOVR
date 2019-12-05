@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject milk;
+    [SerializeField] private float milkDepthFactor = 100f;
+
+    private int score = 0;
+    private float milkDepth;
+
+    private Vector3 milkStartPos;
+
     void Start()
     {
-        
+        milkStartPos = milk.transform.position;
+        milkDepth = milkDepthFactor * 1000f;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        var newMilkPos = milkStartPos;
+        newMilkPos.y += (score / milkDepth);
+
+        milk.transform.position = newMilkPos;
+    }
+
+    public void AddScore(int amount)
+    {
+        score += amount;
     }
 }

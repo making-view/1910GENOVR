@@ -32670,6 +32670,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00d33ae746bd4b46a32056f39f0b828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  milk: {fileID: 1953381499}
+  milkDepthFactor: 100
 --- !u!1 &1341478146
 GameObject:
   m_ObjectHideFlags: 0
