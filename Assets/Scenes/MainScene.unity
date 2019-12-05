@@ -19,7 +19,7 @@ RenderSettings:
   m_FogMode: 1
   m_FogDensity: 0.07
   m_LinearFogStart: 0
-  m_LinearFogEnd: 35
+  m_LinearFogEnd: 50
   m_AmbientSkyColor: {r: 0.12068351, g: 0.15592739, b: 0.2264151, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -49,7 +49,7 @@ LightmapSettings:
     serializedVersion: 2
     m_BounceScale: 1
     m_IndirectOutputScale: 1
-    m_AlbedoBoost: 1
+    m_AlbedoBoost: 1.06
     m_EnvironmentLightingMode: 1
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 0
@@ -15009,7 +15009,7 @@ MonoBehaviour:
   maxThreshold: 80
   minThreshold: -20
   maxMilkTime: 0.3
-  retractionTime: 0.2
+  retractionTime: 0.3
   tittyBone: {fileID: 1984288779}
   tittyMilk: {fileID: 34707427}
 --- !u!136 &446425258
@@ -16439,7 +16439,7 @@ MonoBehaviour:
   maxThreshold: 80
   minThreshold: -20
   maxMilkTime: 0.3
-  retractionTime: 0.2
+  retractionTime: 0.3
   tittyBone: {fileID: 1900593967}
   tittyMilk: {fileID: 70169023}
 --- !u!136 &576181969
@@ -32812,7 +32812,7 @@ MonoBehaviour:
   maxThreshold: 80
   minThreshold: -20
   maxMilkTime: 0.3
-  retractionTime: 0.2
+  retractionTime: 0.3
   tittyBone: {fileID: 1461362811}
   tittyMilk: {fileID: 1743578354}
 --- !u!136 &1353969955
@@ -42632,7 +42632,7 @@ MonoBehaviour:
   maxThreshold: 80
   minThreshold: -20
   maxMilkTime: 0.3
-  retractionTime: 0.2
+  retractionTime: 0.3
   tittyBone: {fileID: 868872585}
   tittyMilk: {fileID: 824979787}
 --- !u!114 &1755194336
