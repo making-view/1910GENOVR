@@ -5,25 +5,6 @@ using Oculus.Avatar;
 
 public class OvrAvatarSkinnedMeshRenderComponent : OvrAvatarRenderComponent
 {
-    private struct FingerBone
-    {
-        public readonly float Radius;
-        public readonly float Height;
-        public FingerBone(float radius, float height)
-        {
-            Radius = radius;
-            Height = height;
-        }
-
-        public Vector3 GetCenter(bool isLeftHand)
-        {
-            return new Vector3(((isLeftHand) ? -1 : 1) * Height / 2.0f, 0, 0);
-        }
-    };
-
-    private readonly FingerBone Phalanges = new FingerBone(0.01f, 0.03f);
-    private readonly FingerBone Metacarpals = new FingerBone(0.01f, 0.05f);
-
     Shader surface;
     Shader surfaceSelfOccluding;
     bool previouslyActive = false;
@@ -34,14 +15,6 @@ public class OvrAvatarSkinnedMeshRenderComponent : OvrAvatarRenderComponent
         this.surface = surface != null ? surface : Shader.Find("OvrAvatar/AvatarSurfaceShader");
         this.mesh = CreateSkinnedMesh(skinnedMeshRender.meshAssetID, skinnedMeshRender.visibilityMask, thirdPersonLayer, firstPersonLayer);
         bones = mesh.bones;
-        Debug.Log("TWO HANDS PLS");
-        foreach(Transform bone in bones)
-        {
-            if (!bone.name.Contains("ignore"))
-            {
-                CreateCollider(bone);
-            }
-        }
         UpdateMeshMaterial(skinnedMeshRender.visibilityMask, mesh);
     }
 
@@ -72,34 +45,6 @@ public class OvrAvatarSkinnedMeshRenderComponent : OvrAvatarRenderComponent
         if (rootMesh.sharedMaterial == null || rootMesh.sharedMaterial.shader != shader)
         {
             rootMesh.sharedMaterial = CreateAvatarMaterial(gameObject.name + "_material", shader);
-        }
-    }
-
-    private void CreateCollider(Transform transform)
-    {
-        if (!transform.gameObject.GetComponent(typeof(CapsuleCollider)) && !transform.gameObject.GetComponent(typeof(SphereCollider)) && transform.name.Contains("hands"))
-        {
-            if (transform.name.Contains("thumb") || transform.name.Contains("index") || transform.name.Contains("middle") || transform.name.Contains("ring") || transform.name.Contains("pinky"))
-            {
-                if (!transform.name.EndsWith("0"))
-                {
-                    CapsuleCollider collider = transform.gameObject.AddComponent<CapsuleCollider>();
-                    if (!transform.name.EndsWith("1"))
-                    {
-                        collider.radius = Phalanges.Radius;
-                        collider.height = Phalanges.Height;
-                        collider.center = Phalanges.GetCenter(transform.name.Contains("_l_"));
-                        collider.direction = 0;
-                    }
-                    else
-                    {
-                        collider.radius = Metacarpals.Radius;
-                        collider.height = Metacarpals.Height;
-                        collider.center = Metacarpals.GetCenter(transform.name.Contains("_l_"));
-                        collider.direction = 0;
-                    }
-                }
-            }
         }
     }
 }
