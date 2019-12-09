@@ -41,36 +41,44 @@ public class NipController : MonoBehaviour
 
     void Update()
     {
-        maxDiff = maxThreshold / thresholdFactor;
-        minDiff = minThreshold / thresholdFactor;
-
-        if (!grabbable.isGrabbed && previouslyGrabbed)
+        if (gameManager.milkingAllowed)
         {
-            StartCoroutine(retractNip());
-        }
+            maxDiff = maxThreshold / thresholdFactor;
+            minDiff = minThreshold / thresholdFactor;
 
-        var diff = Mathf.Clamp((controllerStartPos - transform.position).y, minDiff, maxDiff);
-        var newPos = tittyBone.transform.position;
-        newPos.y = tittyStartPos.y - diff;
+            if (!grabbable.isGrabbed && previouslyGrabbed)
+            {
+                StartCoroutine(retractNip());
+            }
 
-        tittyBone.transform.position = newPos;
+            var diff = Mathf.Clamp((controllerStartPos - transform.position).y, minDiff, maxDiff);
+            var newPos = tittyBone.transform.position;
+            newPos.y = tittyStartPos.y - diff;
 
-        trySquirting = diff == maxDiff;
-        var emission = tittyMilk.emission;
-        emission.rateOverTime = 0.0f;
+            tittyBone.transform.position = newPos;
 
-        if (!squirtRefractoryPeriod && trySquirting && milkTimer <= maxMilkTime)
-        {
-            emission.rateOverTime = 10.0f;
-            milkTimer += Time.deltaTime;
-            gameManager.AddScore((int)(Time.deltaTime * 1000));
+            trySquirting = diff == maxDiff;
+            var emission = tittyMilk.emission;
+            emission.rateOverTime = 0.0f;
+
+            if (!squirtRefractoryPeriod && trySquirting && milkTimer <= maxMilkTime)
+            {
+                emission.rateOverTime = 10.0f;
+                milkTimer += Time.deltaTime;
+                gameManager.AddScore((int)(Time.deltaTime * 1000));
+            }
+            else if (!grabbable.isGrabbed)
+            {
+                milkTimer = 0.0f;
+            }
+
+            previouslyGrabbed = grabbable.isGrabbed;
         }
         else if (!grabbable.isGrabbed)
         {
-            milkTimer = 0.0f;
+            transform.position = controllerStartPos;
+            transform.rotation = controllerStartRot;
         }
-
-        previouslyGrabbed = grabbable.isGrabbed;
     }
 
     private IEnumerator retractNip()
