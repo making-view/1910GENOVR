@@ -78,6 +78,13 @@ public class NipController : MonoBehaviour
         {
             transform.position = controllerStartPos;
             transform.rotation = controllerStartRot;
+            tittyBone.transform.position = tittyStartPos;
+            
+            var emission = tittyMilk.emission;
+            emission.rateOverTime = 0.0f;
+            milkTimer = 0.0f;
+            squirtRefractoryPeriod = false;
+            previouslyGrabbed = false;
         }
     }
 

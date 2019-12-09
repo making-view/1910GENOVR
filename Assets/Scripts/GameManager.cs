@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         scoreText.text = score.ToString();
-        timerText.text = Mathf.Clamp(timer, 0.0f, milkingTime).ToString();
+        timerText.text = Mathf.Clamp(timer, 0.0f, milkingTime).ToString("F2");
 
         var newMilkPos = milkStartPos;
         newMilkPos.y += (score / milkDepth);
