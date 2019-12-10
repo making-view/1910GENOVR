@@ -65,7 +65,7 @@ public class NipController : MonoBehaviour
             {
                 emission.rateOverTime = 10.0f;
                 milkTimer += Time.deltaTime;
-                gameManager.AddScore((int)(Time.deltaTime * 1000));
+                gameManager.IncreaseScore((int)(Time.deltaTime * 1000));
             }
             else if (!grabbable.isGrabbed)
             {
