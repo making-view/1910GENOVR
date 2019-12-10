@@ -433,7 +433,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20850775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.004}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 52020343}
@@ -451,7 +451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31, y: -10}
+  m_AnchoredPosition: {x: 31, y: -9}
   m_SizeDelta: {x: 577.7, y: 716.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &23359170
@@ -14981,7 +14981,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411838301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.07}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1963183968}
@@ -15016,7 +15016,7 @@ MonoBehaviour:
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 137
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -28277,6 +28277,12 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: -5178661895559278292, guid: 1d1e21cb82d6895479e4484bb2f47df6,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5399538364744844056, guid: 83c28b6d2d0bf58409052244182d59a8,
+        type: 3}
     - target: {fileID: -4216859302048453862, guid: 1d1e21cb82d6895479e4484bb2f47df6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28342,12 +28348,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.2075002
       objectReference: {fileID: 0}
-    - target: {fileID: -5178661895559278292, guid: 1d1e21cb82d6895479e4484bb2f47df6,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 5399538364744844056, guid: 83c28b6d2d0bf58409052244182d59a8,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e21cb82d6895479e4484bb2f47df6, type: 3}
 --- !u!4 &1006582446 stripped
@@ -32366,7 +32366,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188266822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0066}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1056641807}
@@ -32374,7 +32374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 22}
+  m_AnchoredPosition: {x: 2, y: 46}
   m_SizeDelta: {x: 800, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1188266824
@@ -34330,7 +34330,7 @@ MonoBehaviour:
   timerText: {fileID: 2052918965}
   gameCodeText: {fileID: 839345652}
   leaderboardScoresGroup: {fileID: 20850776}
-  leaderboardFont: {fileID: 0}
+  leaderboardFont: {fileID: 12800000, guid: 4c90d3c4d98a33647872e06a6f654f9f, type: 3}
   countDownTime: 5
   milkingTime: 45
   milkingAllowed: 0
@@ -38193,6 +38193,12 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: -5178661895559278292, guid: 1d1e21cb82d6895479e4484bb2f47df6,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5399538364744844056, guid: e5f45bf5b6fdf5745ac5659f71b8c2a4,
+        type: 3}
     - target: {fileID: -4216859302048453862, guid: 1d1e21cb82d6895479e4484bb2f47df6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -38258,12 +38264,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.2075
       objectReference: {fileID: 0}
-    - target: {fileID: -5178661895559278292, guid: 1d1e21cb82d6895479e4484bb2f47df6,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 5399538364744844056, guid: e5f45bf5b6fdf5745ac5659f71b8c2a4,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e21cb82d6895479e4484bb2f47df6, type: 3}
 --- !u!4 &1642503378 stripped
@@ -48171,7 +48171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -9.951, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -7.04, y: 2.299}
+  m_AnchoredPosition: {x: -7.127, y: 2.299}
   m_SizeDelta: {x: 657.6, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1963183969
@@ -48232,7 +48232,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1001 &1963475552
 PrefabInstance:

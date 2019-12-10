@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     private float milkDepth = 0.0f;
     private bool gameInProgress = false;
     private string scoreboardPath = "";
+    private bool tryingReset = false;
 
     private Vector3 milkStartPos;
 
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
     {
         scoreboardPath = Application.persistentDataPath + "/scoreboard.save";
         scoreboard = LoadScores();
+        UpdateLeaderboard();
         gameCodeText.text = scoreboard.currentGameCode;
 
         milkStartPos = milk.transform.position;
@@ -55,8 +57,8 @@ public class GameManager : MonoBehaviour
 
         milk.transform.position = newMilkPos;
 
-        if (   OVRInput.GetDown(OVRInput.Button.One)   && OVRInput.GetDown(OVRInput.Button.Two)
-            && OVRInput.GetDown(OVRInput.Button.Three) && OVRInput.GetDown(OVRInput.Button.Four))
+        if (!tryingReset && OVRInput.Get(OVRInput.Button.One)   && OVRInput.Get(OVRInput.Button.Two)
+                         && OVRInput.Get(OVRInput.Button.Three) && OVRInput.Get(OVRInput.Button.Four))
         {
             StartCoroutine(ResetScoreboard());
         }
@@ -109,12 +111,13 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator ResetScoreboard()
     {
+        tryingReset = true;
         var resetTimer = 0.0f;
         var resetTime = 5.0f;
 
         while (resetTimer < resetTime 
-            && OVRInput.GetDown(OVRInput.Button.One)   && OVRInput.GetDown(OVRInput.Button.Two)
-            && OVRInput.GetDown(OVRInput.Button.Three) && OVRInput.GetDown(OVRInput.Button.Four))
+            && OVRInput.Get(OVRInput.Button.One)   && OVRInput.Get(OVRInput.Button.Two)
+            && OVRInput.Get(OVRInput.Button.Three) && OVRInput.Get(OVRInput.Button.Four))
         {
             resetTimer += Time.deltaTime;
 
@@ -126,6 +129,8 @@ public class GameManager : MonoBehaviour
             scoreboard.Reset();
             SaveScores();
         }
+
+        tryingReset = false;
     }
 
     private void SaveScores()
@@ -151,8 +156,6 @@ public class GameManager : MonoBehaviour
             file.Close();
         }
 
-        UpdateLeaderboard();
-
         return result;
     }
 
@@ -168,14 +171,21 @@ public class GameManager : MonoBehaviour
         for (int scoreNo = 1; scoreNo <= highSchores.Count; ++scoreNo)
         {
             var newScore = new GameObject();
+            newScore.name = "Score " + scoreNo;
+
             var text = newScore.AddComponent<Text>();
             text.font = leaderboardFont;
             text.fontStyle = FontStyle.Bold;
             text.fontSize = 58;
             text.color = Color.black;
 
-            var tabs = scoreNo == highSchores.Count ? "\t\t" : "\t";
-            text.text = scoreNo + "." + tabs + "[" + highSchores[scoreNo - 1].Item1 + "] " + highSchores[scoreNo - 1].Item2; 
+            var tabs = scoreNo > 9 ? "\t" : "\t\t";
+            text.text = scoreNo + "." + tabs + "[" + highSchores[scoreNo - 1].Item1 + "]\t" + highSchores[scoreNo - 1].Item2;
+
+            newScore.transform.position = leaderboardScoresGroup.transform.position;
+            newScore.transform.rotation = leaderboardScoresGroup.transform.rotation;
+            newScore.transform.parent = leaderboardScoresGroup.transform;
+            newScore.transform.localScale = new Vector3(1, 1, 1);
         }
     }
 }
