@@ -1230,7 +1230,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.04, y: 0.04, z: 0.04}
+    m_Scale: {x: 0.02, y: 0.02, z: 0.02}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -6653,7 +6653,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.04, y: 0.04, z: 0.04}
+    m_Scale: {x: 0.02, y: 0.02, z: 0.02}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -19233,7 +19233,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.04, y: 0.04, z: 0.04}
+    m_Scale: {x: 0.02, y: 0.02, z: 0.02}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -19308,7 +19308,7 @@ ParticleSystem:
     m_TextureColorAffectsParticles: 1
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
-    randomDirectionAmount: 1
+    randomDirectionAmount: 0.36
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
@@ -37041,7 +37041,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.04, y: 0.04, z: 0.04}
+    m_Scale: {x: 0.02, y: 0.02, z: 0.02}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
