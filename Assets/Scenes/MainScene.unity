@@ -484,7 +484,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: ccc918fc3ca7fca4fbeafdba8c873726,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.076
+      value: 6.17
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ccc918fc3ca7fca4fbeafdba8c873726,
         type: 3}
@@ -1230,7 +1230,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.04, y: 0.04, z: 0.04}
+    m_Scale: {x: 0.02, y: 0.02, z: 0.02}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -6653,7 +6653,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.04, y: 0.04, z: 0.04}
+    m_Scale: {x: 0.02, y: 0.02, z: 0.02}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -19303,7 +19303,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.04, y: 0.04, z: 0.04}
+    m_Scale: {x: 0.02, y: 0.02, z: 0.02}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -19378,7 +19378,7 @@ ParticleSystem:
     m_TextureColorAffectsParticles: 1
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
-    randomDirectionAmount: 1
+    randomDirectionAmount: 0.36
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
@@ -26305,7 +26305,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: ccc918fc3ca7fca4fbeafdba8c873726,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.148
+      value: -6.196
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ccc918fc3ca7fca4fbeafdba8c873726,
         type: 3}
@@ -37220,7 +37220,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.04, y: 0.04, z: 0.04}
+    m_Scale: {x: 0.02, y: 0.02, z: 0.02}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -47160,7 +47160,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
