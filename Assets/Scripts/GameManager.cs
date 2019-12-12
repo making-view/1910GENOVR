@@ -17,12 +17,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Font leaderboardFont = null;
 
     [Header("Game Settings")]
-    [SerializeField] private float countDownTime = 5.0f;
+    [SerializeField] private float countDownTime = 3.0f;
     [SerializeField] private float milkingTime = 45.0f;
     
     [HideInInspector] public bool milkingAllowed = false;
 
     private Scoreboard scoreboard;
+    private AudioSource audioSource;
 
     private int score = 0;
     private float timer = 0.0f;
@@ -35,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         scoreboardPath = Application.persistentDataPath + "/scoreboard.save";
         scoreboard = LoadScores();
         UpdateLeaderboard();
@@ -50,7 +53,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         scoreText.text = score.ToString();
-        timerText.text = Mathf.Clamp(timer, 0.0f, milkingTime).ToString("F2");
 
         var newMilkPos = milkStartPos;
         newMilkPos.y += (score / milkDepth);
@@ -79,15 +81,18 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StartGame()
     {
+        audioSource.Stop();
+        audioSource.Play();
         gameInProgress = true;
         score = 0;
         milk.transform.position = milkStartPos;
-        timer = countDownTime;
+        timer = 0;
         gameCodeText.text = scoreboard.currentGameCode;
 
-        while (timer > 0.0f)
+        while (timer <= countDownTime)
         {
-            timer -= Time.deltaTime;
+            timer += Time.deltaTime;
+            timerText.text = ((int)timer).ToString();
 
             yield return null;
         }
@@ -98,10 +103,12 @@ public class GameManager : MonoBehaviour
         while(timer > 0.0f)
         {
             timer -= Time.deltaTime;
+            timerText.text = Mathf.Clamp(timer, 0.0f, milkingTime).ToString("F2");
 
             yield return null;
         }
 
+        timerText.text = Mathf.Clamp(timer, 0.0f, milkingTime).ToString("F2");
         scoreboard.AddScore(score);
         SaveScores();
 
@@ -180,7 +187,7 @@ public class GameManager : MonoBehaviour
             text.color = Color.black;
 
             var tabs = scoreNo > 9 ? "\t" : "\t\t";
-            text.text = scoreNo + "." + tabs + "[" + highSchores[scoreNo - 1].Item1 + "]\t" + highSchores[scoreNo - 1].Item2;
+            text.text = scoreNo + "." + tabs + "[" + highSchores[scoreNo - 1].Item1 + "] " + highSchores[scoreNo - 1].Item2;
 
             newScore.transform.position = leaderboardScoresGroup.transform.position;
             newScore.transform.rotation = leaderboardScoresGroup.transform.rotation;
