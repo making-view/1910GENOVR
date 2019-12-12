@@ -1,16 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ChainController : MonoBehaviour
 {
-    public delegate void OnChainActionTriggeredDelegate();
-    public OnChainActionTriggeredDelegate onChainActionTriggered;
-
     [SerializeField] private float maxPull = 200f;
     [SerializeField] private float triggerPoint = 150f;
     [SerializeField] private float retractionTime = 0.3f;
     [SerializeField] private GameObject chain = null;
+
+    [Space]
+    public UnityEvent onChainTriggered;
 
     private Vector3 chainStartPos;
     private Vector3 controllerStartPos;
@@ -51,7 +52,7 @@ public class ChainController : MonoBehaviour
            
         if (!chainNeedsReset && diff >= triggerPoint)
         {
-            onChainActionTriggered();
+            onChainTriggered.Invoke();
             chainNeedsReset = true;
         }
         else if (diff < triggerPoint)

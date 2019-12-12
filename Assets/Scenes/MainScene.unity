@@ -11576,6 +11576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 164128193}
+  - component: {fileID: 164128194}
   m_Layer: 0
   m_Name: ChainControls
   m_TagString: Untagged
@@ -11600,6 +11601,18 @@ Transform:
   m_Father: {fileID: 306736517}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &164128194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164128192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea0acd2adbfa15b44a038c1eab2c8360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &187149386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15295,8 +15308,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPull: 200
+  triggerPoint: 150
   retractionTime: 0.3
   chain: {fileID: 1011554098}
+  onChainTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 164128194}
+        m_MethodName: CycleBackward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &517379255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18013,9 +18041,6 @@ Transform:
   - {fileID: 920566052}
   - {fileID: 1085913819}
   - {fileID: 80842194}
-  - {fileID: 2094710696}
-  - {fileID: 1387352229}
-  - {fileID: 1264252143}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30904,12 +30929,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250094210}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1264252143 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 88058c4dd65c3d7428a752de05cb8cbc,
-    type: 3}
-  m_PrefabInstance: {fileID: 80842193}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1267202377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 14daba9989d88684dbd6159221af8e2e,
@@ -32350,12 +32369,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 71a27477ae3357d47bba04808399d1ea,
     type: 3}
   m_PrefabInstance: {fileID: 1383785682}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1387352229 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 88058c4dd65c3d7428a752de05cb8cbc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1085913818}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1388729496
 GameObject:
@@ -42545,8 +42558,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPull: 200
+  triggerPoint: 150
   retractionTime: 0.3
   chain: {fileID: 1323343120}
+  onChainTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 164128194}
+        m_MethodName: TogglePlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1821139000
 GameObject:
   m_ObjectHideFlags: 0
@@ -46712,12 +46740,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084941628}
   m_CullTransparentMesh: 0
---- !u!4 &2094710696 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 88058c4dd65c3d7428a752de05cb8cbc,
-    type: 3}
-  m_PrefabInstance: {fileID: 920566051}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2102483477
 GameObject:
   m_ObjectHideFlags: 0
@@ -46809,6 +46831,7 @@ GameObject:
   - component: {fileID: 2108745620}
   - component: {fileID: 2108745619}
   - component: {fileID: 2108745618}
+  - component: {fileID: 2108745622}
   m_Layer: 0
   m_Name: FrontChain
   m_TagString: Untagged
@@ -46843,8 +46866,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPull: 200
+  triggerPoint: 150
   retractionTime: 0.3
   chain: {fileID: 4419954076997613688}
+  onChainTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 164128194}
+        m_MethodName: CycleForward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2108745619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46892,6 +46930,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2108745622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108745616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd23d2abbdc04249bc8ea43eca8457d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2115326152
 PrefabInstance:
   m_ObjectHideFlags: 0

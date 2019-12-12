@@ -2,22 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChainAction : MonoBehaviour
+public class VideoPlayerActions : MonoBehaviour
 {
-    private Vector3 startPos;
-    private Quaternion startRot;
-
     // Start is called before the first frame update
     void Start()
     {
-        startPos = transform.position;
-        startRot = transform.rotation;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = startRot;
-        
+
+    }
+
+    public void CycleForward()
+    {
+
+    }
+
+    public void CycleBackward()
+    {
+
+    }
+
+    public void TogglePlay()
+    {
+
     }
 }
