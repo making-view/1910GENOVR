@@ -48,7 +48,7 @@ public class NipController : MonoBehaviour
 
             if (!grabbable.isGrabbed && previouslyGrabbed)
             {
-                StartCoroutine(retractNip());
+                StartCoroutine(RetractNip());
             }
 
             var diff = Mathf.Clamp((controllerStartPos - transform.position).y, minDiff, maxDiff);
@@ -88,16 +88,15 @@ public class NipController : MonoBehaviour
         }
     }
 
-    private IEnumerator retractNip()
+    private IEnumerator RetractNip()
     {
         squirtRefractoryPeriod = true;
-
         transform.rotation = controllerStartRot;
+
         var diff = (controllerStartPos - transform.position).y;
         if (diff > maxDiff)
         {
-            diff += 0.01f;
-            transform.position = new Vector3(controllerStartPos.x, controllerStartPos.y - diff, controllerStartPos.z);
+            transform.position = new Vector3(controllerStartPos.x, controllerStartPos.y - maxDiff, controllerStartPos.z);
         }
 
         var initialPos = transform.position;
