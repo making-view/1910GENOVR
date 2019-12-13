@@ -12,6 +12,7 @@ public class NipController : MonoBehaviour
     [SerializeField] private GameObject tittyBone = null;
     [SerializeField] private ParticleSystem tittyMilk = null;
 
+    private NipAudio nipAudio = null;
     private Vector3 tittyStartPos;
     private Vector3 controllerStartPos;
     private Quaternion controllerStartRot;
@@ -32,6 +33,7 @@ public class NipController : MonoBehaviour
         tittyStartPos = tittyBone.transform.position;
         grabbable = GetComponent<OVRGrabbable>();
         gameManager = FindObjectOfType<GameManager>();
+        nipAudio = GetComponent<NipAudio>();
 
         var emission = tittyMilk.emission;  
         emission.rateOverTime = 0.0f;
@@ -63,6 +65,7 @@ public class NipController : MonoBehaviour
 
             if (!squirtRefractoryPeriod && trySquirting && milkTimer <= maxMilkTime)
             {
+                nipAudio.playSound();
                 emission.rateOverTime = 10.0f;
                 milkTimer += Time.deltaTime;
                 gameManager.IncreaseScore((int)(Time.deltaTime * 1000));

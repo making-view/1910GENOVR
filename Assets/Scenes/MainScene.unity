@@ -14838,6 +14838,7 @@ GameObject:
   - component: {fileID: 446425257}
   - component: {fileID: 446425260}
   - component: {fileID: 446425259}
+  - component: {fileID: 446425261}
   m_Layer: 0
   m_Name: BackLeftNip
   m_TagString: Untagged
@@ -14924,6 +14925,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &446425261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446425255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65aa6b96826132a46a77f0238d5ecfd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &456207019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15995,6 +16008,7 @@ GameObject:
   - component: {fileID: 576181968}
   - component: {fileID: 576181971}
   - component: {fileID: 576181970}
+  - component: {fileID: 576181972}
   m_Layer: 0
   m_Name: BackRightNip
   m_TagString: Untagged
@@ -16081,6 +16095,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &576181972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576181966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65aa6b96826132a46a77f0238d5ecfd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &576254786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32532,6 +32558,7 @@ GameObject:
   - component: {fileID: 1353969954}
   - component: {fileID: 1353969957}
   - component: {fileID: 1353969956}
+  - component: {fileID: 1353969958}
   m_Layer: 0
   m_Name: FrontRightNip
   m_TagString: Untagged
@@ -32618,6 +32645,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1353969958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353969952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65aa6b96826132a46a77f0238d5ecfd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1355034149
 GameObject:
   m_ObjectHideFlags: 0
@@ -33940,6 +33979,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1459739183}
+  - component: {fileID: 1459739184}
   m_Layer: 0
   m_Name: NipControls
   m_TagString: Untagged
@@ -33965,6 +34005,32 @@ Transform:
   m_Father: {fileID: 1040956757}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1459739184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459739182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1d71ecc556a1f49b7acc0770652a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1339760219}
+  scoreWhenBucketMilky: 400
+  volumeMin: 0.8
+  volumeMax: 1
+  pitchMin: 0.8
+  pitchMax: 1.2
+  metalMilk:
+  - {fileID: 8300000, guid: decb08a1597012d4dbd73f37963c3574, type: 3}
+  - {fileID: 8300000, guid: 20acd5ef98540e34e84eae5a5c0d9e73, type: 3}
+  - {fileID: 8300000, guid: e7b3818ad76c03f4db7d1ca3cc54a29b, type: 3}
+  wetMilk:
+  - {fileID: 8300000, guid: 46a425eb44ba47c47b5b0085cf2af438, type: 3}
+  - {fileID: 8300000, guid: 3acefd7c1980353408c06f503f58184d, type: 3}
+  - {fileID: 8300000, guid: 761c6dd0edce9a142a6e6563902c3de4, type: 3}
 --- !u!1 &1461362811 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8158952640151348408, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
@@ -42341,6 +42407,7 @@ GameObject:
   - component: {fileID: 1755194335}
   - component: {fileID: 1755194337}
   - component: {fileID: 1755194336}
+  - component: {fileID: 1755194338}
   m_Layer: 0
   m_Name: FrontLeftNip
   m_TagString: Untagged
@@ -42427,6 +42494,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1755194338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755194332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65aa6b96826132a46a77f0238d5ecfd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1757443833
 GameObject:
   m_ObjectHideFlags: 0
