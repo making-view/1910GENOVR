@@ -20,7 +20,7 @@ public class ChainController : MonoBehaviour
     private OVRGrabbable grabbable = null;
     private bool previouslyGrabbed = false;
     private float maxDiff = 0.0f;
-    private float triggerDiff = 0.0f;
+    private float actualTriggerPoint = 0.0f;
     private bool chainNeedsReset = false;
 
     void Start()
@@ -31,13 +31,13 @@ public class ChainController : MonoBehaviour
         grabbable = GetComponent<OVRGrabbable>();
        
         maxDiff = maxPull / thresholdFactor;
-        triggerDiff = triggerPoint / thresholdFactor;
+        actualTriggerPoint = triggerPoint / thresholdFactor;
     }
 
     void Update()
     {
         maxDiff = maxPull / thresholdFactor;
-        triggerDiff = triggerPoint / thresholdFactor;
+        actualTriggerPoint = triggerPoint / thresholdFactor;
 
         if (!grabbable.isGrabbed && previouslyGrabbed)
         {
@@ -50,12 +50,12 @@ public class ChainController : MonoBehaviour
 
         chain.transform.position = newPos;
            
-        if (!chainNeedsReset && diff >= triggerPoint)
+        if (!chainNeedsReset && diff >= actualTriggerPoint)
         {
             onChainTriggered.Invoke();
             chainNeedsReset = true;
         }
-        else if (diff < triggerPoint)
+        else if (diff < actualTriggerPoint)
         {
             chainNeedsReset = false;
         }

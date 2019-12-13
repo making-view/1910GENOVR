@@ -189,10 +189,7 @@ public class GameManager : MonoBehaviour
             var tabs = scoreNo > 9 ? "\t" : "\t\t";
             text.text = scoreNo + "." + tabs + "[" + highSchores[scoreNo - 1].Item1 + "] " + highSchores[scoreNo - 1].Item2;
 
-            newScore.transform.position = leaderboardScoresGroup.transform.position;
-            newScore.transform.rotation = leaderboardScoresGroup.transform.rotation;
-            newScore.transform.parent = leaderboardScoresGroup.transform;
-            newScore.transform.localScale = new Vector3(1, 1, 1);
+            newScore.transform.SetParent(leaderboardScoresGroup.transform, false);
         }
     }
 }
