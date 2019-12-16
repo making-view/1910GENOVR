@@ -13,6 +13,7 @@ public class ChainController : MonoBehaviour
     [Space]
     public UnityEvent onChainTriggered;
 
+    private GenericAudioSource audioSource = null;
     private Vector3 chainStartPos;
     private Vector3 controllerStartPos;
     private Quaternion controllerStartRot;
@@ -29,6 +30,7 @@ public class ChainController : MonoBehaviour
         controllerStartRot = transform.rotation;
         chainStartPos = chain.transform.position;
         grabbable = GetComponent<OVRGrabbable>();
+        audioSource = GetComponent<GenericAudioSource>();
        
         maxDiff = maxPull / thresholdFactor;
         actualTriggerPoint = triggerPoint / thresholdFactor;
@@ -52,6 +54,7 @@ public class ChainController : MonoBehaviour
            
         if (!chainNeedsReset && diff >= actualTriggerPoint)
         {
+            audioSource.playSound();
             onChainTriggered.Invoke();
             chainNeedsReset = true;
         }
