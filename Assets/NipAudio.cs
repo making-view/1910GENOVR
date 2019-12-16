@@ -6,13 +6,10 @@ public class NipAudio : MonoBehaviour
 {
     private AudioSource audioSource;
     private NipAudioHandler nipAudioHandler = null;
-    private GameManager gameManager = null;
 
     private List<AudioClip> metalMilk = null;
     private List<AudioClip> wetMilk = null;
     private List<AudioClip> clipsToPlay = null;
-
-    private AudioClip previousClip = null;
 
     private bool bucketMilky = false;
     private float pitchMin, pitchMax, volumeMin, volumeMax;
@@ -56,16 +53,18 @@ public class NipAudio : MonoBehaviour
             clipsToPlay = new List<AudioClip>(metalMilk);
 
         //don't play same as last time
-        clipsToPlay.Remove(previousClip);
+        if (nipAudioHandler.getLast() != null)
+        clipsToPlay.Remove(nipAudioHandler.getLast());
         //find new clip to play
-        audioSource.clip = clipsToPlay[Random.Range(0, clipsToPlay.Count)];
+        AudioClip clip = clipsToPlay[Random.Range(0, clipsToPlay.Count)];
         //add variations to audio
         audioSource.pitch = Random.Range(pitchMin, pitchMax);
         audioSource.volume = Random.Range(volumeMin, volumeMax);
         //play audio
+        audioSource.clip = clip;
         audioSource.Play();
         //update previous clip
-        previousClip = audioSource.clip;
+        nipAudioHandler.setLast(clip);
     }
 
     //update if bucket is full of milk or not

@@ -10,9 +10,9 @@ public class NipAudioHandler : MonoBehaviour
     private GameManager gameManager = null;
 
     [SerializeField]
-    [Range(0, 500)]
+    [Range(0, 1000)]
     [Tooltip("Score threshold when milking sounds turn milky")]
-    private int scoreWhenBucketMilky = 50;
+    private int scoreWhenBucketMilky = 500;
 
     [Range(0.0f, 1.0f)]
     [Tooltip("Minimum volume in random variation")]
@@ -36,9 +36,12 @@ public class NipAudioHandler : MonoBehaviour
     //internal variables
     private bool isMilking = false;
     private bool bucketMilky = false;
+    private AudioClip lastPlayed = null;
 
-    //make sure min variables aren't higher than max variables
-    private void Start()
+
+
+//make sure min variables aren't higher than max variables
+private void Start()
     {
         if(pitchMin > pitchMax)
             pitchMin = pitchMax;
@@ -78,5 +81,15 @@ public class NipAudioHandler : MonoBehaviour
     {
         foreach (NipAudio n in GetComponentsInChildren<NipAudio>())
             n.setBucketMilky(bucketMilky);
+    }
+
+    public void setLast(AudioClip last)
+    {
+        lastPlayed = last;
+    }
+
+    public AudioClip getLast()
+    {
+        return lastPlayed;
     }
 }
