@@ -61,7 +61,7 @@ public class GenericAudioHandler : MonoBehaviour
         if (lastPlayed != null && clipsToPlay.Count > 1)
             clipsToPlay.Remove(lastPlayed);
         //find new clip to play
-        AudioClip clip = clipsToPlay[Random.Range(0, clipsToPlay.Count)];
+        AudioClip clip = clipsToPlay[Random.Range(0, clipsToPlay.Count - 1)];
 
         lastPlayed = clip;
 
