@@ -73,17 +73,4 @@ public class NipAudio : MonoBehaviour
     {
         this.bucketMilky = bucketMilky;
     }
-
-    //possibly remove this update loop before compiling
-    private void Update()
-    {
-        //keep variables updated while debugging to be able to test different values
-        if(runInEditMode)
-        {
-            pitchMax = nipAudioHandler.pitchMax;
-            pitchMin = nipAudioHandler.pitchMin;
-            volumeMax = nipAudioHandler.volumeMax;
-            volumeMin = nipAudioHandler.volumeMin;
-        }
-    }
 }
