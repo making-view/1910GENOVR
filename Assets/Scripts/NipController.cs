@@ -12,7 +12,7 @@ public class NipController : MonoBehaviour
     [SerializeField] private GameObject tittyBone = null;
     [SerializeField] private ParticleSystem tittyMilk = null;
 
-    private NipAudio nipAudio = null;
+    private GenericAudioSource nipAudio = null;
     private Vector3 tittyStartPos;
     private Vector3 controllerStartPos;
     private Quaternion controllerStartRot;
@@ -33,7 +33,7 @@ public class NipController : MonoBehaviour
         tittyStartPos = tittyBone.transform.position;
         grabbable = GetComponent<OVRGrabbable>();
         gameManager = FindObjectOfType<GameManager>();
-        nipAudio = GetComponent<NipAudio>();
+        nipAudio = GetComponent<GenericAudioSource>();
 
         var emission = tittyMilk.emission;  
         emission.rateOverTime = 0.0f;
