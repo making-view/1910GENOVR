@@ -41,7 +41,7 @@ public class VideoPlayerActions : MonoBehaviour
 
         foreach (var file in fileInfos)
         {
-            if (file.Extension == ".MOV")
+            if (file.Extension == ".MOV" || file.Extension == ".mp4")
             {
                 var newFile = new GameObject();
                 newFile.name = "Video";
