@@ -14871,14 +14871,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 446425255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efb7341e9ab5fea4daef27c6510329db, type: 3}
+  m_Script: {fileID: 11500000, guid: 39ee8bb1e503f624a9d5ab8d93f5d66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxThreshold: 80
   minThreshold: -20
   maxMilkTime: 0.3
   retractionTime: 0.3
-  tittyBone: {fileID: 1984288779}
+  tittyBone: {fileID: 729267410}
   tittyMilk: {fileID: 34707427}
 --- !u!136 &446425258
 CapsuleCollider:
@@ -14936,9 +14936,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 446425255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65aa6b96826132a46a77f0238d5ecfd1, type: 3}
+  m_Script: {fileID: 11500000, guid: 320158f172cee2743a5f682fe40251fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioHandler: {fileID: 0}
 --- !u!1001 &456207019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16041,14 +16042,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 576181966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efb7341e9ab5fea4daef27c6510329db, type: 3}
+  m_Script: {fileID: 11500000, guid: 39ee8bb1e503f624a9d5ab8d93f5d66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxThreshold: 80
   minThreshold: -20
   maxMilkTime: 0.3
   retractionTime: 0.3
-  tittyBone: {fileID: 1900593967}
+  tittyBone: {fileID: 711877731}
   tittyMilk: {fileID: 70169023}
 --- !u!136 &576181969
 CapsuleCollider:
@@ -16106,9 +16107,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 576181966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65aa6b96826132a46a77f0238d5ecfd1, type: 3}
+  m_Script: {fileID: 11500000, guid: 320158f172cee2743a5f682fe40251fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioHandler: {fileID: 0}
 --- !u!1001 &576254786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17676,6 +17678,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710002369}
   m_CullTransparentMesh: 0
+--- !u!1 &711877731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8388811064674294556, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1067376953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &717426544
 GameObject:
   m_ObjectHideFlags: 0
@@ -18117,6 +18125,12 @@ Transform:
   m_Father: {fileID: 399278827}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &729267410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2163969867834318815, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1067376953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &729319515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18408,7 +18422,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 129
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -24228,12 +24242,6 @@ Transform:
   m_Father: {fileID: 1061330859}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 180}
---- !u!1 &868872585 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5416584328793646671, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1067376953}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &868872586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1292126969753988163, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
@@ -31553,6 +31561,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 126346502}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1273049050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6927368918266156525, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1067376953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1280840531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32695,14 +32709,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1353969952}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efb7341e9ab5fea4daef27c6510329db, type: 3}
+  m_Script: {fileID: 11500000, guid: 39ee8bb1e503f624a9d5ab8d93f5d66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxThreshold: 80
   minThreshold: -20
   maxMilkTime: 0.3
   retractionTime: 0.3
-  tittyBone: {fileID: 1461362811}
+  tittyBone: {fileID: 1446243858}
   tittyMilk: {fileID: 1743578354}
 --- !u!136 &1353969955
 CapsuleCollider:
@@ -32760,9 +32774,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1353969952}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65aa6b96826132a46a77f0238d5ecfd1, type: 3}
+  m_Script: {fileID: 11500000, guid: 320158f172cee2743a5f682fe40251fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioHandler: {fileID: 0}
 --- !u!1 &1355034149
 GameObject:
   m_ObjectHideFlags: 0
@@ -33829,6 +33844,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 661076820}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1446243858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3939981286295973140, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1067376953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1454558700
 GameObject:
   m_ObjectHideFlags: 0
@@ -34123,26 +34144,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1d71ecc556a1f49b7acc0770652a4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 1339760219}
-  scoreWhenBucketMilky: 1000
   volumeMin: 0.8
   volumeMax: 1
   pitchMin: 0.8
   pitchMax: 1.2
-  metalMilk:
-  - {fileID: 8300000, guid: c29f5803481d2904f8ea9a7c25c76b3e, type: 3}
-  - {fileID: 8300000, guid: fa066abacd4559e4ba9e0afa42b696f6, type: 3}
-  - {fileID: 8300000, guid: 81a2806fb709fd545a7865a2610de67b, type: 3}
-  wetMilk:
-  - {fileID: 8300000, guid: f688b2ecb0f9d7643813ca8ff536c5a1, type: 3}
-  - {fileID: 8300000, guid: 42c81ff1da2991f4795f6a55e2138217, type: 3}
-  - {fileID: 8300000, guid: 1164e207449202a429fc4ba8ae89aa48, type: 3}
---- !u!1 &1461362811 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8158952640151348408, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1067376953}
-  m_PrefabAsset: {fileID: 0}
+  startingClips: milkymetal
+  audioClips:
+  - name: milkymetal
+    clip:
+    - {fileID: 8300000, guid: c29f5803481d2904f8ea9a7c25c76b3e, type: 3}
+    - {fileID: 8300000, guid: fa066abacd4559e4ba9e0afa42b696f6, type: 3}
+    - {fileID: 8300000, guid: 81a2806fb709fd545a7865a2610de67b, type: 3}
+  - name: milkywet
+    clip:
+    - {fileID: 8300000, guid: f688b2ecb0f9d7643813ca8ff536c5a1, type: 3}
+    - {fileID: 8300000, guid: 42c81ff1da2991f4795f6a55e2138217, type: 3}
+    - {fileID: 8300000, guid: 1164e207449202a429fc4ba8ae89aa48, type: 3}
+  gameManager: {fileID: 1339760219}
+  scoreWhenBucketMilky: 1000
 --- !u!4 &1461362812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2953139709250357995, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
@@ -42564,14 +42583,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1755194332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efb7341e9ab5fea4daef27c6510329db, type: 3}
+  m_Script: {fileID: 11500000, guid: 39ee8bb1e503f624a9d5ab8d93f5d66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxThreshold: 80
   minThreshold: -20
   maxMilkTime: 0.3
   retractionTime: 0.3
-  tittyBone: {fileID: 868872585}
+  tittyBone: {fileID: 1273049050}
   tittyMilk: {fileID: 824979787}
 --- !u!114 &1755194336
 MonoBehaviour:
@@ -42615,9 +42634,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1755194332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65aa6b96826132a46a77f0238d5ecfd1, type: 3}
+  m_Script: {fileID: 11500000, guid: 320158f172cee2743a5f682fe40251fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioHandler: {fileID: 0}
 --- !u!1 &1757443833
 GameObject:
   m_ObjectHideFlags: 0
@@ -44587,12 +44607,6 @@ Transform:
   m_Father: {fileID: 5006512735422106801}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1900593967 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8996169847281111978, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1067376953}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1900593968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1304076305531941358, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
@@ -46368,12 +46382,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: dac16dac079667847843f187c79add54,
     type: 3}
   m_PrefabInstance: {fileID: 1113914042}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1984288779 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8802741213252502652, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1067376953}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1984288780 stripped
 Transform:
