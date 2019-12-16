@@ -71,6 +71,11 @@ public class GameManager : MonoBehaviour
         score += amount;
     }
 
+    public int getScore()
+    {
+        return score;
+    }
+
     private void ButtonPressed()
     {
         if (!gameInProgress)
