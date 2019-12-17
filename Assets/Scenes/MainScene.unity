@@ -28450,12 +28450,7 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8388811064674294556, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -2163969867834318815, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+    - target: {fileID: 5416584328793646671, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -28474,11 +28469,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.0016032032
-      objectReference: {fileID: 0}
-    - target: {fileID: 5416584328793646671, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
         type: 3}
@@ -28610,12 +28600,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.697
       objectReference: {fileID: 0}
+    - target: {fileID: -8388811064674294556, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3939981286295973140, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6927368918266156525, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2163969867834318815, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -34303,17 +34303,12 @@ MonoBehaviour:
   pitchMin: 0.8
   pitchMax: 1.2
   startingClips: milkymetal
-  audioClips:
-  - name: milkymetal
-    clip:
-    - {fileID: 8300000, guid: c29f5803481d2904f8ea9a7c25c76b3e, type: 3}
-    - {fileID: 8300000, guid: fa066abacd4559e4ba9e0afa42b696f6, type: 3}
-    - {fileID: 8300000, guid: 81a2806fb709fd545a7865a2610de67b, type: 3}
-  - name: milkywet
-    clip:
-    - {fileID: 8300000, guid: f688b2ecb0f9d7643813ca8ff536c5a1, type: 3}
-    - {fileID: 8300000, guid: 42c81ff1da2991f4795f6a55e2138217, type: 3}
-    - {fileID: 8300000, guid: 1164e207449202a429fc4ba8ae89aa48, type: 3}
+  audioClips: [{name: milkymetal, clip: [{fileID: 8300000, guid: c29f5803481d2904f8ea9a7c25c76b3e,
+          type: 3}, {fileID: 8300000, guid: fa066abacd4559e4ba9e0afa42b696f6, type: 3},
+        {fileID: 8300000, guid: 81a2806fb709fd545a7865a2610de67b, type: 3}]}, {name: milkywet,
+      clip: [{fileID: 8300000, guid: f688b2ecb0f9d7643813ca8ff536c5a1, type: 3}, {
+          fileID: 8300000, guid: 42c81ff1da2991f4795f6a55e2138217, type: 3}, {fileID: 8300000,
+          guid: 1164e207449202a429fc4ba8ae89aa48, type: 3}]}]
   gameManager: {fileID: 1339760219}
   scoreWhenBucketMilky: 4000
 --- !u!4 &1461362812 stripped

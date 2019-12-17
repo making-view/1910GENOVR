@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(CapsuleCollider))]
@@ -25,6 +26,7 @@ public class NipController : MonoBehaviour
     private float maxDiff = 0.0f;
     private float minDiff = 0.0f;
     private GameManager gameManager = null;
+    private List<NipController> otherNips = null;
 
     void Start()
     {
@@ -39,6 +41,8 @@ public class NipController : MonoBehaviour
         emission.rateOverTime = 0.0f;
         maxDiff = maxThreshold / thresholdFactor;
         minDiff = minThreshold / thresholdFactor;
+
+        otherNips = new List<NipController>(FindObjectsOfType<NipController>()).Where(nc => nc != this).ToList();
     }
 
     void Update()
@@ -66,9 +70,11 @@ public class NipController : MonoBehaviour
             if (!squirtRefractoryPeriod && trySquirting && milkTimer <= maxMilkTime)
             {
                 nipAudio.playSound();
-                emission.rateOverTime = 10.0f;
                 milkTimer += Time.deltaTime;
-                gameManager.IncreaseScore((int)(Time.deltaTime * 1000));
+
+                var scoreDivisor = otherNips.Any(nc => nc.IsMilking()) ? 2 : 1;
+                emission.rateOverTime = 10.0f / scoreDivisor;
+                gameManager.IncreaseScore((int)(Time.deltaTime * 1000) / scoreDivisor);
             }
             else if (!grabbable.isGrabbed)
             {
@@ -89,6 +95,11 @@ public class NipController : MonoBehaviour
             squirtRefractoryPeriod = false;
             previouslyGrabbed = false;
         }
+    }
+
+    public bool IsMilking()
+    {
+        return tittyMilk.emission.rateOverTime.constant > 0.0f;
     }
 
     private IEnumerator RetractNip()
