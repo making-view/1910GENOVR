@@ -14912,7 +14912,7 @@ MonoBehaviour:
   minThreshold: -20
   maxMilkTime: 0.3
   retractionTime: 0.3
-  tittyBone: {fileID: 729267410}
+  tittyBone: {fileID: 703931311}
   tittyMilk: {fileID: 34707427}
 --- !u!136 &446425258
 CapsuleCollider:
@@ -14973,7 +14973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320158f172cee2743a5f682fe40251fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioHandler: {fileID: 0}
+  audioHandler: {fileID: 1459739184}
 --- !u!1001 &456207019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15857,6 +15857,12 @@ Transform:
   m_Father: {fileID: 399278827}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &542714049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8996169847281111978, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1067376953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &543174629
 GameObject:
   m_ObjectHideFlags: 0
@@ -16097,7 +16103,7 @@ MonoBehaviour:
   minThreshold: -20
   maxMilkTime: 0.3
   retractionTime: 0.3
-  tittyBone: {fileID: 711877731}
+  tittyBone: {fileID: 542714049}
   tittyMilk: {fileID: 70169023}
 --- !u!136 &576181969
 CapsuleCollider:
@@ -16158,7 +16164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320158f172cee2743a5f682fe40251fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioHandler: {fileID: 0}
+  audioHandler: {fileID: 1459739184}
 --- !u!1001 &576254786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17649,6 +17655,12 @@ Transform:
   m_Father: {fileID: 767301114}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &703931311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8802741213252502652, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1067376953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &710002369
 GameObject:
   m_ObjectHideFlags: 0
@@ -17726,12 +17738,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710002369}
   m_CullTransparentMesh: 0
---- !u!1 &711877731 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -8388811064674294556, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1067376953}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &717426544
 GameObject:
   m_ObjectHideFlags: 0
@@ -18173,12 +18179,6 @@ Transform:
   m_Father: {fileID: 399278827}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &729267410 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -2163969867834318815, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1067376953}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &729319515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23948,6 +23948,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 14daba9989d88684dbd6159221af8e2e,
     type: 3}
   m_PrefabInstance: {fileID: 827774762}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &837724345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5416584328793646671, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1067376953}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &839345651
 GameObject:
@@ -31705,12 +31711,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 126346502}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1273049050 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6927368918266156525, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1067376953}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1280840531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32870,7 +32870,7 @@ MonoBehaviour:
   minThreshold: -20
   maxMilkTime: 0.3
   retractionTime: 0.3
-  tittyBone: {fileID: 1446243858}
+  tittyBone: {fileID: 1725985980}
   tittyMilk: {fileID: 1743578354}
 --- !u!136 &1353969955
 CapsuleCollider:
@@ -32931,7 +32931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320158f172cee2743a5f682fe40251fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioHandler: {fileID: 0}
+  audioHandler: {fileID: 1459739184}
 --- !u!1 &1355034149
 GameObject:
   m_ObjectHideFlags: 0
@@ -33997,12 +33997,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1543ecd339f4467418eee4f9e786f917,
     type: 3}
   m_PrefabInstance: {fileID: 661076820}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1446243858 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3939981286295973140, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1067376953}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1454558700
 GameObject:
@@ -37504,6 +37498,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707151708}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1725985980 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8158952640151348408, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1067376953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1726088276 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: f46eedae423a0244c8453f96f15c02d2,
@@ -42822,7 +42822,7 @@ MonoBehaviour:
   minThreshold: -20
   maxMilkTime: 0.3
   retractionTime: 0.3
-  tittyBone: {fileID: 1273049050}
+  tittyBone: {fileID: 837724345}
   tittyMilk: {fileID: 824979787}
 --- !u!114 &1755194336
 MonoBehaviour:
@@ -42869,7 +42869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320158f172cee2743a5f682fe40251fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioHandler: {fileID: 0}
+  audioHandler: {fileID: 1459739184}
 --- !u!1 &1757443833
 GameObject:
   m_ObjectHideFlags: 0
