@@ -34292,12 +34292,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1d71ecc556a1f49b7acc0770652a4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeMin: 0.671
-  volumeMax: 0.736
+  volumeMin: 0.416
+  volumeMax: 0.536
   pitchMin: 0.8
   pitchMax: 1.2
-  startingClips: 
-  audioClips: []
+  startingClips: milkymetal
+  audioClips: [{name: milkymetal, clip: [{fileID: 8300000, guid: c29f5803481d2904f8ea9a7c25c76b3e,
+          type: 3}, {fileID: 8300000, guid: fa066abacd4559e4ba9e0afa42b696f6, type: 3},
+        {fileID: 8300000, guid: 81a2806fb709fd545a7865a2610de67b, type: 3}]}, {name: milkywet,
+      clip: [{fileID: 8300000, guid: f688b2ecb0f9d7643813ca8ff536c5a1, type: 3}, {
+          fileID: 8300000, guid: 42c81ff1da2991f4795f6a55e2138217, type: 3}, {fileID: 8300000,
+          guid: 1164e207449202a429fc4ba8ae89aa48, type: 3}]}]
   gameManager: {fileID: 1339760219}
   scoreWhenBucketMilky: 4000
 --- !u!4 &1461362812 stripped
