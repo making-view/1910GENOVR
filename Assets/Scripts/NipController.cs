@@ -70,10 +70,10 @@ public class NipController : MonoBehaviour
             if (!squirtRefractoryPeriod && trySquirting && milkTimer <= maxMilkTime)
             {
                 nipAudio.playSound();
-                emission.rateOverTime = 10.0f;
                 milkTimer += Time.deltaTime;
 
                 var scoreDivisor = otherNips.Any(nc => nc.IsMilking()) ? 2 : 1;
+                emission.rateOverTime = 10.0f / scoreDivisor;
                 gameManager.IncreaseScore((int)(Time.deltaTime * 1000) / scoreDivisor);
             }
             else if (!grabbable.isGrabbed)
