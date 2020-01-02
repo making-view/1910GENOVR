@@ -28456,6 +28456,16 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8996169847281111978, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802741213252502652, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5416584328793646671, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -28551,6 +28561,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8ddd0253ccc11e441915f3ca0d9bd3c7, type: 2}
+    - target: {fileID: 6982998891531957462, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
         type: 3}
       propertyPath: m_Controller
@@ -28627,16 +28642,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8158952640151348408, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8802741213252502652, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8996169847281111978, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -32347,13 +32352,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290078213}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: -12.976, y: 2.547, z: 0}
-  m_LocalScale: {x: 0.42749998, y: 2.048794, z: 0.76}
+  m_LocalScale: {x: 0.76, y: 2.048794, z: 0.4275}
   m_Children: []
   m_Father: {fileID: 1821139001}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
 --- !u!1 &1291186709
 GameObject:
   m_ObjectHideFlags: 0
@@ -34297,12 +34302,17 @@ MonoBehaviour:
   pitchMin: 0.8
   pitchMax: 1.2
   startingClips: milkymetal
-  audioClips: [{name: milkymetal, clip: [{fileID: 8300000, guid: c29f5803481d2904f8ea9a7c25c76b3e,
-          type: 3}, {fileID: 8300000, guid: fa066abacd4559e4ba9e0afa42b696f6, type: 3},
-        {fileID: 8300000, guid: 81a2806fb709fd545a7865a2610de67b, type: 3}]}, {name: milkywet,
-      clip: [{fileID: 8300000, guid: f688b2ecb0f9d7643813ca8ff536c5a1, type: 3}, {
-          fileID: 8300000, guid: 42c81ff1da2991f4795f6a55e2138217, type: 3}, {fileID: 8300000,
-          guid: 1164e207449202a429fc4ba8ae89aa48, type: 3}]}]
+  audioClips:
+  - name: milkymetal
+    clip:
+    - {fileID: 8300000, guid: c29f5803481d2904f8ea9a7c25c76b3e, type: 3}
+    - {fileID: 8300000, guid: fa066abacd4559e4ba9e0afa42b696f6, type: 3}
+    - {fileID: 8300000, guid: 81a2806fb709fd545a7865a2610de67b, type: 3}
+  - name: milkywet
+    clip:
+    - {fileID: 8300000, guid: f688b2ecb0f9d7643813ca8ff536c5a1, type: 3}
+    - {fileID: 8300000, guid: 42c81ff1da2991f4795f6a55e2138217, type: 3}
+    - {fileID: 8300000, guid: 1164e207449202a429fc4ba8ae89aa48, type: 3}
   gameManager: {fileID: 1339760219}
   scoreWhenBucketMilky: 4000
 --- !u!4 &1461362812 stripped
@@ -47830,6 +47840,11 @@ PrefabInstance:
     - target: {fileID: 9111962883125049612, guid: 5c95fe9b2a1b77e4bbc4102de0046d5d,
         type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5492869166124669652, guid: 5c95fe9b2a1b77e4bbc4102de0046d5d,
+        type: 3}
+      propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
