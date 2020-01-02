@@ -28561,6 +28561,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8ddd0253ccc11e441915f3ca0d9bd3c7, type: 2}
+    - target: {fileID: 6982998891531957462, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: c17ae67ccf7c7374a9ed748d17d0dcdc,
         type: 3}
       propertyPath: m_Controller
@@ -47835,6 +47840,11 @@ PrefabInstance:
     - target: {fileID: 9111962883125049612, guid: 5c95fe9b2a1b77e4bbc4102de0046d5d,
         type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5492869166124669652, guid: 5c95fe9b2a1b77e4bbc4102de0046d5d,
+        type: 3}
+      propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
