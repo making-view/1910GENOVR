@@ -54,4 +54,23 @@ public class DoorController : MonoBehaviour
         middleBarrel.SetTrigger("Close");
         leftBarrel.SetTrigger("Close");
     }
+
+    IEnumerator AnimateDoor(AnimState animState)
+    {
+        isAnimating = true;
+        var timer = 0.0f;
+
+        rightBarrel.Play("Entry");
+        middleBarrel.Play("Entry");
+        leftBarrel.Play("Entry");
+
+        while (timer <= animationLength)
+        {
+            timer += Time.deltaTime;
+
+            yield return null;
+        }
+
+        isAnimating = false;
+    }
 }
