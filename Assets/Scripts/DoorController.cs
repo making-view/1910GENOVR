@@ -68,14 +68,15 @@ public class DoorController : MonoBehaviour
         isDoorOpen = animState == AnimState.Open;
 
         var timer = 0.0f;
-        var triggerText = isDoorOpen ? "Open" : "Close";
+        var mainTriggerText = isDoorOpen ? "Open" : "Close";
+        var reverseTriggerText = isDoorOpen ? "Close" : "Open";
+        
+        leftBarrel.SetTrigger(mainTriggerText);
+        middleBarrel.SetTrigger(mainTriggerText);
+        rightBarrel.SetTrigger(reverseTriggerText);
 
-        rightBarrel.SetTrigger(triggerText);
-        middleBarrel.SetTrigger(triggerText);
-        leftBarrel.SetTrigger(triggerText);
-
-        leftDoor.SetTrigger(triggerText);
-        rightDoor.SetTrigger(triggerText);
+        leftDoor.SetTrigger(mainTriggerText);
+        rightDoor.SetTrigger(mainTriggerText);
 
         rightChain.SetBool("Shake", true);
         leftChain.SetBool("Shake", true);
