@@ -9,16 +9,21 @@ public enum AnimState {
 
 public class DoorController : MonoBehaviour
 {
-    [SerializeField] GameObject leftDoor;
-    [SerializeField] GameObject rightDoor;
+    [Header("Config")]
+    [SerializeField] Animator leftDoor;
+    [SerializeField] Animator rightDoor;
     [SerializeField] Animator rightChain;
     [SerializeField] Animator leftChain;
     [SerializeField] Animator rightBarrel;
     [SerializeField] Animator middleBarrel;
     [SerializeField] Animator leftBarrel;
 
+    [Header("Settings")]
+    [SerializeField] float chainShakeAdvanceEndTime = 0.3f;
+
     float animationLength = 2.0f;
     bool isAnimating = false;
+    bool isDoorOpen = false;
 
     public void Start()
     {
@@ -30,12 +35,12 @@ public class DoorController : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.O))
         {
             Open();
         }
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             Close();
         }
@@ -43,30 +48,47 @@ public class DoorController : MonoBehaviour
 
     public void Open()
     {
-        rightBarrel.SetTrigger("Open");
-        middleBarrel.SetTrigger("Open");
-        leftBarrel.SetTrigger("Open");
+        if (!isAnimating && !isDoorOpen)
+        {
+            StartCoroutine(AnimateDoor(AnimState.Open));
+        }
     }
 
     public void Close()
     {
-        rightBarrel.SetTrigger("Close");
-        middleBarrel.SetTrigger("Close");
-        leftBarrel.SetTrigger("Close");
+        if (!isAnimating && isDoorOpen)
+        {
+            StartCoroutine(AnimateDoor(AnimState.Close));
+        }
     }
 
     IEnumerator AnimateDoor(AnimState animState)
     {
         isAnimating = true;
-        var timer = 0.0f;
+        isDoorOpen = animState == AnimState.Open;
 
-        rightBarrel.Play("Entry");
-        middleBarrel.Play("Entry");
-        leftBarrel.Play("Entry");
+        var timer = 0.0f;
+        var triggerText = isDoorOpen ? "Open" : "Close";
+
+        rightBarrel.SetTrigger(triggerText);
+        middleBarrel.SetTrigger(triggerText);
+        leftBarrel.SetTrigger(triggerText);
+
+        leftDoor.SetTrigger(triggerText);
+        rightDoor.SetTrigger(triggerText);
+
+        rightChain.SetBool("Shake", true);
+        leftChain.SetBool("Shake", true);
 
         while (timer <= animationLength)
         {
             timer += Time.deltaTime;
+
+            if (timer >= animationLength - chainShakeAdvanceEndTime)
+            {
+                rightChain.SetBool("Shake", false);
+                leftChain.SetBool("Shake", false);
+            }
 
             yield return null;
         }
