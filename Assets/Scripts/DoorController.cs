@@ -17,6 +17,7 @@ public class DoorController : MonoBehaviour
     [SerializeField] Animator rightBarrel;
     [SerializeField] Animator middleBarrel;
     [SerializeField] Animator leftBarrel;
+    [SerializeField] GenericAudioSource audioSource;
 
     [Header("Settings")]
     [SerializeField] float chainShakeAdvanceEndTime = 0.3f;
@@ -44,6 +45,14 @@ public class DoorController : MonoBehaviour
         {
             Close();
         }
+    }
+
+    public void ToggleOpen()
+    {
+        if (isDoorOpen)
+            Close();
+        else
+            Open();
     }
 
     public void Open()
@@ -80,6 +89,8 @@ public class DoorController : MonoBehaviour
 
         rightChain.SetBool("Shake", true);
         leftChain.SetBool("Shake", true);
+
+        audioSource.playSound();
 
         while (timer <= animationLength)
         {

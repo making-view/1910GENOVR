@@ -10961,6 +10961,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 80842193}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &80842195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 88058c4dd65c3d7428a752de05cb8cbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 80842193}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &80842196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80842195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320158f172cee2743a5f682fe40251fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioHandler: {fileID: 0}
 --- !u!1001 &82582043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11817,6 +11836,7 @@ GameObject:
   - component: {fileID: 164128193}
   - component: {fileID: 164128194}
   - component: {fileID: 164128195}
+  - component: {fileID: 164128196}
   m_Layer: 0
   m_Name: ChainControls
   m_TagString: Untagged
@@ -11840,7 +11860,7 @@ Transform:
   - {fileID: 514977247}
   - {fileID: 561636908}
   m_Father: {fileID: 306736517}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &164128194
 MonoBehaviour:
@@ -11882,6 +11902,27 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 502d87992a2abaa4eb0d9eec2a9cdd73, type: 3}
     - {fileID: 8300000, guid: 69abe39bcc4c65343962d0e7eed04df6, type: 3}
     - {fileID: 8300000, guid: 2cd3a0a5d51183745bffb5106977f005, type: 3}
+--- !u!114 &164128196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164128192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468f437f14ce7804aaca37919200975d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 330091265}
+  rightDoor: {fileID: 1167295367}
+  rightChain: {fileID: 475154691}
+  leftChain: {fileID: 1932231706}
+  rightBarrel: {fileID: 200088865}
+  middleBarrel: {fileID: 528475452}
+  leftBarrel: {fileID: 552811344}
+  audioSource: {fileID: 80842196}
+  chainShakeAdvanceEndTime: 0.3
 --- !u!1001 &187149386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12846,9 +12887,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'DOOR
-
-    Close/Open'
+  m_Text: DOOR
 --- !u!222 &242346085
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13539,8 +13578,8 @@ Transform:
   - {fileID: 6445422774827904026}
   - {fileID: 7216008010409150818}
   - {fileID: 7216008011240964956}
-  - {fileID: 164128193}
   - {fileID: 1032244176}
+  - {fileID: 164128193}
   m_Father: {fileID: 1821139001}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16335,7 +16374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561636907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.13, y: 1.7517, z: 0.8991}
+  m_LocalPosition: {x: -10.13, y: 1.7517, z: 0.935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 164128193}
@@ -16369,12 +16408,12 @@ MonoBehaviour:
   maxPull: 200
   triggerPoint: 150
   retractionTime: 0.3
-  chain: {fileID: 1011554098}
+  chain: {fileID: 1032244177}
   onChainTriggered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 164128194}
-        m_MethodName: CycleBackward
+      - m_Target: {fileID: 164128196}
+        m_MethodName: ToggleOpen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27814,7 +27853,7 @@ PrefabInstance:
     - target: {fileID: 7216008011304604781, guid: 30d03d97d738163469d80de1f7433b9e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7216008011304604781, guid: 30d03d97d738163469d80de1f7433b9e,
         type: 3}
@@ -27851,6 +27890,12 @@ PrefabInstance:
 --- !u!4 &1032244176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7216008011304604781, guid: 30d03d97d738163469d80de1f7433b9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1032244175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1032244177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1256113348459714622, guid: 30d03d97d738163469d80de1f7433b9e,
     type: 3}
   m_PrefabInstance: {fileID: 1032244175}
   m_PrefabAsset: {fileID: 0}
@@ -36263,17 +36308,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1586542454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 468f437f14ce7804aaca37919200975d, type: 3}
+  m_Script: {fileID: 11500000, guid: 91d3b7eab0d77c946936ec6b3581fed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftDoor: {fileID: 330091265}
-  rightDoor: {fileID: 1167295367}
-  rightChain: {fileID: 475154691}
-  leftChain: {fileID: 1932231706}
-  rightBarrel: {fileID: 200088865}
-  middleBarrel: {fileID: 528475452}
-  leftBarrel: {fileID: 552811344}
-  chainShakeAdvanceEndTime: 0.3
+  volumeMin: 0.8
+  volumeMax: 1
+  pitchMin: 0.8
+  pitchMax: 1.2
+  startingClips: door
+  audioClips:
+  - name: door
+    clip:
+    - {fileID: 8300000, guid: bc1d4414bf2d9a1489160b3c797e2841, type: 3}
 --- !u!1001 &1590081607
 PrefabInstance:
   m_ObjectHideFlags: 0
