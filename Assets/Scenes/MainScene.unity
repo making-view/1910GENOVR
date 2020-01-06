@@ -11891,8 +11891,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d3b7eab0d77c946936ec6b3581fed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeMin: 0.645
-  volumeMax: 0.713
+  volumeMin: 0.453
+  volumeMax: 0.583
   pitchMin: 0.616
   pitchMax: 0.775
   startingClips: chains
@@ -36311,7 +36311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d3b7eab0d77c946936ec6b3581fed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeMin: 0.8
+  volumeMin: 1
   volumeMax: 1
   pitchMin: 0.8
   pitchMax: 1.2
